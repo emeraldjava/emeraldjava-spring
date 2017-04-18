@@ -3,15 +3,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>ie.emeraldjava.springboot</groupId>
-	<artifactId>spring-boot-examples</artifactId>
+	<groupId>ie.emeraldjava</groupId>
+	<artifactId>spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>spring-boot-examples</name>
+	<name>emeraldjava-spring</name>
 
 	<modules>
+		<module>rest-auth</module>
 		<module>thymeleaf</module>
 	</modules>
-	
+
 </project>
