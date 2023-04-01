@@ -11,6 +11,8 @@
 	<name>emeraldjava-spring</name>
 
 	<modules>
+		<module>inmemory-messages</module>
+		<module>embedded-kafka</module>
 		<module>rest-auth</module>
 		<module>thymeleaf</module>
 		<module>graphql</module>
