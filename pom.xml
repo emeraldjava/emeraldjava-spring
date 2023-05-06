@@ -11,6 +11,7 @@
 	<name>emeraldjava-spring</name>
 
 	<modules>
+		<module>spring-aop</module>
 		<module>inmemory-messages</module>
 		<module>embedded-kafka</module>
 		<module>rest-auth</module>
