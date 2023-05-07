@@ -1,13 +1,29 @@
 package com.github.emeraldjava.springaop;
 
+import com.github.emeraldjava.springaop.service.MyService;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class SpringAopApplicationTests {
 
+    @Autowired
+    MyService myService;
+
     @Test
-    void contextLoads() {
+    void createBill() {
+        myService.createBill();
+    }
+
+    @Test
+    void createBillArg() {
+        myService.createBill(2l);
+    }
+
+    @Test
+    void createBillArgEx() throws Exception {
+        myService.createBillEx(4l);
     }
 
 }
