@@ -26,4 +26,13 @@ class SpringAopApplicationTests {
         myService.createBillEx(4l);
     }
 
+    @Test
+    void createBillArgExCatch() throws Exception {
+        try {
+            myService.createBillEx(5l);
+        } catch(Throwable e) {
+            e.printStackTrace();
+        }
+    }
+
 }

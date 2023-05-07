@@ -15,9 +15,14 @@ public class LoggingAspectWithArgException {
     public void logPointcutArgsException() {}
 
     @Before("logPointcutArgsException()")
-    public void logMethodCallsWithArgsAdvice(JoinPoint joinPoint) {
+    public void logMethodCallsWithArgsAdvice(JoinPoint joinPoint) throws Throwable {
         System.out.println("In Aspect from logPointcutArgsException "+joinPoint.getSignature().getName());
         System.out.println("arg "+joinPoint.getArgs()[0]);
+        if( ((Long)(joinPoint.getArgs()[0])).equals(Long.parseLong("5"))) {
+            System.out.println("here ");
+            throw new Exception("LoggingAspectWithArgException");
+            //throw new RuntimeException("LoggingAspectWithArgException");
+        }
     }
 }
 
