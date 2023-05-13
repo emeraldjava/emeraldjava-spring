@@ -12,6 +12,24 @@
     <artifactId>app-mod</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>ie.emeraldjava</groupId>
+            <artifactId>service-a-mod</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>ie.emeraldjava</groupId>-->
+<!--            <artifactId>service-b-mod</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>ie.emeraldjava</groupId>
+            <artifactId>aspect-mod</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

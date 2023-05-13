@@ -12,5 +12,13 @@
     <artifactId>service-a-mod</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>ie.emeraldjava</groupId>
+            <artifactId>service-b-mod</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

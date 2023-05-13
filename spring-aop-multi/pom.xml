@@ -7,6 +7,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.11</version>
+        <relativePath>/</relativePath>
     </parent>
 
     <groupId>ie.emeraldjava</groupId>
@@ -14,8 +15,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>service-a-mod</module>
         <module>service-b-mod</module>
+        <module>service-a-mod</module>
         <module>aspect-mod</module>
         <module>app-mod</module>
     </modules>
