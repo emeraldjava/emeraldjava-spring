@@ -13,16 +13,11 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerA
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
-@SpringBootApplication(exclude = {
-    DataSourceAutoConfiguration.class,
-    DataSourceTransactionManagerAutoConfiguration.class,
-    HibernateJpaAutoConfiguration.class})
+@SpringBootApplication()
 @Slf4j
 public class DualContextsApp implements CommandLineRunner {
 
     public static void main(String[] args) {
-        //SpringApplication.run(DualContextsApp.class, args);
-
         new SpringApplicationBuilder()
             .parent(AppConfig.class).web(WebApplicationType.NONE)
             .child(RegionAConfig.class).web(WebApplicationType.SERVLET)
