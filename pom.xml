@@ -18,6 +18,7 @@
 		<module>thymeleaf</module>
 		<module>graphql</module>
 		<module>apache-poi-racemaster</module>
-	</modules>
+        <module>spring-aop-multi</module>
+    </modules>
 
 </project>
