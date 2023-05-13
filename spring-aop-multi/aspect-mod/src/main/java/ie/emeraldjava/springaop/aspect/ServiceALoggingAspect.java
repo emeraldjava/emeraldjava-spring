@@ -23,7 +23,7 @@ public class ServiceALoggingAspect {
 
     @Before("logPointcutServiceA()")
     public void logMethodCallsWithArgsAdvice() {
-        log.info("In ServiceALoggingAspect from logPointcutServiceA");
+        log.info("--> In ServiceALoggingAspect from logPointcutServiceA");
     }
 
 }

@@ -24,9 +24,9 @@ public class ServiceBLoggingAspect {
 
     @Before("logPointcutServiceB()")
     public void beforeLogPointcutServiceB(JoinPoint joinPoint) throws Throwable {
-        log.info("In ServiceBLoggingAspect from beforeLogPointcutServiceB");
-        log.info("arg "+joinPoint.getArgs()[0]);
-        if( ((Long)(joinPoint.getArgs()[0])).equals(Long.parseLong("2"))) {
+        log.info("--> In ServiceBLoggingAspect from beforeLogPointcutServiceB");
+        log.info("--> arg "+joinPoint.getArgs()[0]);
+        if( ((Long)(joinPoint.getArgs()[0])).equals(Long.parseLong("5"))) {
             log.info("beforeLogPointcutServiceB.exception");
             throw new Exception("LoggingAspectWithArgException");
         }
