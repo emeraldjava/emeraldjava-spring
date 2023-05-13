@@ -19,6 +19,7 @@
 		<module>graphql</module>
 		<module>apache-poi-racemaster</module>
         <module>spring-aop-multi</module>
+        <module>dual-contexts</module>
     </modules>
 
 </project>
