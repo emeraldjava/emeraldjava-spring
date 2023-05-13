@@ -16,8 +16,10 @@ public class ServiceBImpl implements ServiceB {
 
 
     @Override
-    public boolean doesSomething() {
-        log.info("{}","doesSomething");
+    public boolean doesSomething(Long id) throws Exception {
+        log.info("{}:{}","doesSomething",id);
+        if(id==-1)
+            throw new Exception("");
         return false;
     }
 }

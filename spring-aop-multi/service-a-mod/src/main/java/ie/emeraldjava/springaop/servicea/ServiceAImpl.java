@@ -22,7 +22,11 @@ public class ServiceAImpl implements ServiceA {
     @Override
     public boolean doesStuff() {
         log.info("{}","doesStuff");
-        serviceB.doesSomething();
+        try {
+            serviceB.doesSomething(2l);
+        } catch(Exception e) {
+            log.error("ServiceAImpl.doesStuff.exceptionHandler:{}",e.getMessage());
+        }
         return false;
     }
 }

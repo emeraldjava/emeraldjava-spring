@@ -2,5 +2,5 @@ package ie.emeraldjava.springaop.serviceb;
 
 public interface ServiceB {
 
-    boolean doesSomething();
+    boolean doesSomething(Long id) throws Exception;
 }
