@@ -37,8 +37,8 @@ public class RegionBConfig {
         return DataSourceBuilder.create().build();
     }
 
-    @Bean
-    public RegionController getRegionBController() {
-        return new RegionController(getRegion());
-    }
+//    @Bean
+//    public RegionController getRegionBController() {
+//        return new RegionController(getRegion());
+//    }
 }
