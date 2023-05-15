@@ -64,10 +64,11 @@ public class AppConfig {
     @Primary
     @Bean(name="entityManagerFactory")
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean
-            (EntityManagerFactoryBuilder builder,
+            (EntityManagerFactoryBuilder entityManagerFactoryBuilder,
              @Qualifier("datasource") DataSource dataSource){
         // https://www.javadevjournal.com/spring-boot/multiple-data-sources-with-spring-boot/
-        return builder
+        // https://stackoverflow.com/a/59461049/55794
+        return entityManagerFactoryBuilder
                 .dataSource(dataSource)
                 .packages("ie.emeraldjava.dualctxs.domain.jpa")
                 .persistenceUnit("Global")
