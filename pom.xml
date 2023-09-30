@@ -20,6 +20,7 @@
 		<module>apache-poi-racemaster</module>
         <module>spring-aop-multi</module>
         <module>dual-contexts</module>
+        <module>vaadin</module>
     </modules>
 
 </project>
