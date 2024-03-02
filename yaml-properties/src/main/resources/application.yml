@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: YamlPropsApp
+
+app-list-setup:
+  list:
+    -
+      name: a
+      tag: a-list-value
+    -
+      name: b
+      tag: b-list-value
+
+app-map-setup:
+  map:
+    aValue:
+      name: a
+      tag: a-map-value
+    bValue:
+      name: b
+      tag: b-map-value
