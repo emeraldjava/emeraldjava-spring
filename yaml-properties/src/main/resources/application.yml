@@ -7,15 +7,24 @@ app-list-setup:
     -
       name: a
       tag: a-list-value
+      child-a:
+        child-aName: listChildA
     -
       name: b
       tag: b-list-value
+      child-b:
+        child-bName: listChildB
 
 app-map-setup:
   map:
     aValue:
       name: a
       tag: a-map-value
+      child-b:
+        child-bName: mapChildB
+      child-a:
+        child-aName: mapChildA
+
     bValue:
       name: b
       tag: b-map-value

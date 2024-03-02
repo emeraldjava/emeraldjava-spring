@@ -34,8 +34,10 @@ public class YamlPropsApplication implements CommandLineRunner {
 
         log.info("listConfig:{}/{}",listConfig.getList().size(),listConfig.getList());
         // listConfig:2/[Setup(name=a, tag=a-list-value), Setup(name=b, tag=b-list-value)]
+        // listConfig:2/[Setup(name=a, tag=a-list-value, childA=SetupChildA(childAName=listChildA), childB=null), Setup(name=b, tag=b-list-value, childA=null, childB=SetupChildB(childBName=listChildB))]
 
         log.info("mapConfig:{}/{}",mapConfig.getMap().size(),mapConfig.getMap());
         // mapConfig:2/{aValue=Setup(name=a, tag=a-map-value), bValue=Setup(name=b, tag=b-map-value)}
+        // mapConfig:2/{aValue=Setup(name=a, tag=a-map-value, childA=SetupChildA(childAName=mapChildA), childB=SetupChildB(childBName=mapChildB)), bValue=Setup(name=b, tag=b-map-value, childA=null, childB=null)}
     }
 }

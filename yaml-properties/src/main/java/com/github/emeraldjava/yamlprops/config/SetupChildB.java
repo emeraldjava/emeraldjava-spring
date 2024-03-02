@@ -5,9 +5,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties
 @Data
-public class Setup {
-    private String name;
-    private String tag;
-    private SetupChildA childA;
-    private SetupChildB childB;
+public class SetupChildB {
+    private String childBName;
 }
