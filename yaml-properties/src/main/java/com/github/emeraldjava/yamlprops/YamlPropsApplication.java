@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 
 @SpringBootApplication(exclude = {
         DataSourceAutoConfiguration.class,
@@ -31,6 +32,8 @@ public class YamlPropsApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         // print the content of the list/map from application.yml
+
+//        DataSourceBuilder
 
         log.info("listConfig:{}/{}",listConfig.getList().size(),listConfig.getList());
         // listConfig:2/[Setup(name=a, tag=a-list-value), Setup(name=b, tag=b-list-value)]

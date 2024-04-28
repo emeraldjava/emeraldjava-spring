@@ -20,7 +20,7 @@
         </dependency>
 <!--        <dependency>-->
 <!--            <groupId>ie.emeraldjava</groupId>-->
-<!--            <artifactId>service-b-mod</artifactId>-->
+<!--            <artifactId>myService-b-mod</artifactId>-->
 <!--            <version>0.0.1-SNAPSHOT</version>-->
 <!--        </dependency>-->
         <dependency>
