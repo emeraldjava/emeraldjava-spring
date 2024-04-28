@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: httpbin-gateway
+
+server:
+  servlet:
+    context-path: /
+
+# https://stackoverflow.com/questions/55877188/spring-boot-actuator-returns-404-not-found
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
+
+# https://springdoc.org/faq.html#_what_is_a_proper_way_to_set_up_swagger_ui_to_use_provided_spec_yml
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: false
+    xpath: /swagger-xx.html
+    url: /openapi/httpbin-openapi.yaml
+  api-docs:
+    enabled: false
