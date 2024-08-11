@@ -25,7 +25,7 @@
 		<module>apache-poi-racemaster</module>
         <module>spring-aop-multi</module>
         <module>dual-contexts</module>
-<!--        <module>vaadin</module>-->
+        <module>vaadin</module>
         <module>flink-inmemory</module>
 		<module>joinfaces</module>
         <module>yaml-properties</module>
