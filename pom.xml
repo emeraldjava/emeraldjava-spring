@@ -5,10 +5,15 @@
 
 	<groupId>ie.emeraldjava</groupId>
 	<artifactId>spring</artifactId>
+	<name>emeraldjava-spring</name>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>emeraldjava-spring</name>
+	<properties>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
 	<modules>
 		<module>spring-aop</module>
@@ -20,12 +25,12 @@
 		<module>apache-poi-racemaster</module>
         <module>spring-aop-multi</module>
         <module>dual-contexts</module>
-        <module>vaadin</module>
+<!--        <module>vaadin</module>-->
         <module>flink-inmemory</module>
 		<module>joinfaces</module>
         <module>yaml-properties</module>
         <module>httpbin-gateway</module>
-      <module>springboot3</module>
+        <module>springboot3</module>
         <module>vuejs-webjar</module>
         <module>graalvm</module>
 		<module>graalvm/graaljs</module>
