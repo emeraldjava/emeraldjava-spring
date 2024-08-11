@@ -11,6 +11,12 @@ https://stackoverflow.com/questions/37329708/can-frontend-maven-plugin-use-node-
     npm run format
     npm run dev
 
+package npm dist as a webjar 
+
+- https://www.wissel.net/blog/2021/12/deploying-your-frontend-as-webjar.html
+- https://medium.com/orienteer/working-with-npm-from-java-6acddd97f7a4
+- https://stackoverflow.com/questions/42164938/step-by-step-guide-on-how-to-create-a-webjar-for-front-end-application
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).

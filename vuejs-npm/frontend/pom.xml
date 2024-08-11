@@ -19,6 +19,21 @@
     </properties>
 
     <build>
+        <resources>
+            <!-- Output of the NPM build -->
+            <!-- https://www.wissel.net/blog/2021/12/deploying-your-frontend-as-webjar.html -->
+            <resource>
+                <directory>dist</directory>
+                <filtering>false</filtering>
+            </resource>
+            <!-- Direct into the JAR -->
+            <resource>
+                <directory>jar</directory>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+
+
         <plugins>
             <!--
             Use exec to run the globally installed node
@@ -57,6 +72,14 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+
+            <plugin>
+                <!-- Prepare the JAR -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
             </plugin>
 
 

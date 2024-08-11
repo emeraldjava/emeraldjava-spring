@@ -33,7 +33,7 @@
         <module>springboot3</module>
         <module>vuejs-webjar</module>
         <module>graalvm</module>
-		<module>graalvm/graaljs</module>
+		<module>vuejs-npm</module>
 	</modules>
 
 </project>
