@@ -25,6 +25,10 @@
 		<module>joinfaces</module>
         <module>yaml-properties</module>
         <module>httpbin-gateway</module>
-    </modules>
+      <module>springboot3</module>
+        <module>vuejs-webjar</module>
+        <module>graalvm</module>
+		<module>graalvm/graaljs</module>
+	</modules>
 
 </project>
