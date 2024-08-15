@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.7/css/bootstrap.css">
+    <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('p').animate({
+                fontSize: '48px'
+            }, "slow");
+        });
+    </script>
+</head>
+<body>
+index from public dir
+<p th:text="'Hello, ' + ${name} + '!'">para</p>
+</body>
+
+<div class="container">
+    <h1>Form Registration</h1>
+</div>
+
+</html>

@@ -19,19 +19,19 @@
     </properties>
 
     <build>
-        <resources>
-            <!-- Output of the NPM build -->
-            <!-- https://www.wissel.net/blog/2021/12/deploying-your-frontend-as-webjar.html -->
-            <resource>
-                <directory>dist</directory>
-                <filtering>false</filtering>
-            </resource>
-            <!-- Direct into the JAR -->
-            <resource>
-                <directory>jar</directory>
-                <filtering>false</filtering>
-            </resource>
-        </resources>
+<!--        <resources>-->
+<!--            &lt;!&ndash; Output of the NPM build &ndash;&gt;-->
+<!--            &lt;!&ndash; https://www.wissel.net/blog/2021/12/deploying-your-frontend-as-webjar.html &ndash;&gt;-->
+<!--            <resource>-->
+<!--                <directory>dist</directory>-->
+<!--                <filtering>false</filtering>-->
+<!--            </resource>-->
+<!--            &lt;!&ndash; Direct into the JAR &ndash;&gt;-->
+<!--            <resource>-->
+<!--                <directory>jar</directory>-->
+<!--                <filtering>false</filtering>-->
+<!--            </resource>-->
+<!--        </resources>-->
 
 
         <plugins>
@@ -46,7 +46,7 @@
                 <executions>
                     <execution>
                         <id>run-npm-install</id>
-                        <phase>compile</phase>
+                        <phase>process-resources</phase>
                         <goals>
                             <goal>exec</goal>
                         </goals>
@@ -74,6 +74,30 @@
                 </executions>
             </plugin>
 
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/classes/META-INF/resources/webjars/frontend/</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/dist/</directory>
+                                    <includes>
+                                        <include>**/*.*</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 
             <plugin>
                 <!-- Prepare the JAR -->
@@ -81,8 +105,6 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.4.2</version>
             </plugin>
-
-
 
 <!--            <plugin>-->
 <!--                <groupId>com.github.eirslett</groupId>-->
