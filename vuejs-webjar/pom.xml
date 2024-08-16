@@ -66,6 +66,12 @@
             <artifactId>jquery</artifactId>
             <version>3.7.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>ie.emeraldjava.webjars</groupId>
+            <artifactId>vuejs-frontend</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

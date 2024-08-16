@@ -10,7 +10,10 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>frontend</artifactId>
+    <groupId>ie.emeraldjava.webjars</groupId>
+    <artifactId>vuejs-frontend</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
