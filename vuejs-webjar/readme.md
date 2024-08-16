@@ -8,6 +8,8 @@ https://spring.io/blog/2021/12/17/client-side-development-with-spring-boot-appli
 https://github.com/spring-projects/spring-boot/issues/28715
 https://github.com/spring-projects/spring-framework/issues/27619
 
+https://github.com/webjars/sample-spring_boot/blob/master/pom.xml
+
 ## 15-08-2024
 
 https://dev.to/reytech-lesson/using-webjars-in-spring-boot-53a0
