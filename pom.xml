@@ -34,6 +34,14 @@
         <module>vuejs-webjar</module>
         <module>graalvm</module>
 		<module>vuejs-npm</module>
-	</modules>
+        <module>junit-rest</module>
+		<module>junit-rest/openapi</module>
+		<module>junit-rest/app</module>
+		<module>junit-rest/lib</module>
+		<module>junit-rest/tests</module>
+        <module>grpc</module>
+		<module>netty</module>
+        <module>raft</module>
+    </modules>
 
 </project>
