@@ -13,8 +13,5 @@ export default defineConfig({
       },
     }),
     tsconfigPaths(),
-  ],
-  build: {
-    outDir: "../src/main/resources/static"
-  }
+  ]
 });
