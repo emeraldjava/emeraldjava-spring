@@ -29,12 +29,13 @@ components:
       content:
         application/json:
           schema:
-            oneOf:
-              - $ref: 'VoteRequest'
-              - $ref: 'VoteResponse'
+            anyOf:
+              - $ref: '#/components/schemas/VoteRequestModel'
+              - $ref: '#/components/schemas/VoteResponseModel'
   schemas:
-    MyVoteRequest:
-      type:
-      properties:
-        foo:
-          $ref: 'VoteRequest'
+    VoteRequestModel:
+      allOf:
+        - $ref: 'VoteRequest'
+    VoteResponseModel:
+      allOf:
+        - $ref: 'VoteResponse'
