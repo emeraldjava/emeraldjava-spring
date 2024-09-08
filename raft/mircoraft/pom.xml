@@ -86,16 +86,33 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <skipValidateSpec>true</skipValidateSpec>
+                            <skipValidateSpec>false</skipValidateSpec>
                             <inputSpec>./src/main/resources/openapi/microraft.yml</inputSpec>
                             <generatorName>spring</generatorName>
+                            <apiPackage>com.baeldung.openapi.api</apiPackage>
+                            <modelPackage>com.baeldung.openapi.model</modelPackage>
                             <configOptions>
+                                <delegatePattern>true</delegatePattern>
                                 <openApiNullable>false</openApiNullable>
                                 <interfaceOnly>true</interfaceOnly>
                             </configOptions>
+                            <!--
+                            https://stackoverflow.com/questions/65336977/openapi-3-0-a-reference-to-the-existing-class
+                            -->
+                            <importMappings>
+                                <importMapping>VoteRequest=io.microraft.model.message.VoteRequest</importMapping>
+                                <importMapping>VoteResponse=io.microraft.model.message.VoteResponse</importMapping>
+                            </importMappings>
                         </configuration>
                     </execution>
                 </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>io.microraft</groupId>
+                        <artifactId>microraft</artifactId>
+                        <version>0.7</version>
+                    </dependency>
+                </dependencies>
             </plugin>
 
             <plugin>

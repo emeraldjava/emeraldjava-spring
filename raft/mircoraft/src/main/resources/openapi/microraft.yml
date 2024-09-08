@@ -12,3 +12,29 @@ servers:
 tags:
   - name: accounts
     description: Operations between bank accounts
+paths:
+  /raft:
+    get:
+      requestBody:
+        $ref: '#/components/requestBodies/RaftPayloadBody'
+      responses:
+        200:
+          description: 'Updated'
+
+components:
+  requestBodies: # https://swagger.io/docs/specification/describing-request-body/
+    RaftPayloadBody:
+      description: 'The Raft protocol body'
+      required: true
+      content:
+        application/json:
+          schema:
+            oneOf:
+              - $ref: 'VoteRequest'
+              - $ref: 'VoteResponse'
+  schemas:
+    MyVoteRequest:
+      type:
+      properties:
+        foo:
+          $ref: 'VoteRequest'
