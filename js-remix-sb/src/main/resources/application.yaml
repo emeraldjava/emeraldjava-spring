@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: RemixApp
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

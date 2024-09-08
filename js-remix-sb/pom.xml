@@ -4,12 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>ie.emeraldjava</groupId>
-        <artifactId>spring</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.18</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>js-remix-sb</artifactId>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -21,6 +23,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -37,6 +44,44 @@
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <executions>
+                    <execution>
+                        <id>run-npm-install</id>
+                        <phase>none</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>npm</executable>
+                            <arguments>
+                                <argument>install</argument>
+                            </arguments>
+                            <workingDirectory>./src/ui/</workingDirectory>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>run-build</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>npm</executable>
+                            <arguments>
+                                <argument>run</argument>
+                                <argument>build</argument>
+                            </arguments>
+                            <workingDirectory>./src/ui/</workingDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

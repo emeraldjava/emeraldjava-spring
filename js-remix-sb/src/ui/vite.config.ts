@@ -5,6 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [
     remix({
+      ssr: false, // use SPA mode - see https://remix.run/docs/en/main/guides/spa-mode
       future: {
         v3_fetcherPersist: true,
         v3_relativeSplatPath: true,
