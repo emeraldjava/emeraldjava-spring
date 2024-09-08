@@ -42,6 +42,8 @@
         <module>grpc</module>
 		<module>netty</module>
         <module>raft</module>
-    </modules>
+        <module>reactive</module>
+		<module>js-remix-sb</module>
+	</modules>
 
 </project>
