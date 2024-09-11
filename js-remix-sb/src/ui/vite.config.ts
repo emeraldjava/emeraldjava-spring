@@ -13,5 +13,9 @@ export default defineConfig({
       },
     }),
     tsconfigPaths(),
-  ]
+  ],
+  build: {
+    outDir: './../../target/classes/statix',
+    emptyOutDir: true
+  }
 });
