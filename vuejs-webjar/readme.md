@@ -2,6 +2,11 @@
 
 https://www.baeldung.com/maven-webjars
 
+## 11-09-2024
+
+https://www.baeldung.com/maven-webjars
+https://blog.swdev.ed.ac.uk/2016/03/15/building-a-webjar/
+
 ## 16-08-2024
 
 https://spring.io/blog/2021/12/17/client-side-development-with-spring-boot-applications#webjars
