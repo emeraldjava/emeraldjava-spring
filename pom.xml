@@ -44,6 +44,7 @@
         <module>raft</module>
         <module>reactive</module>
 		<module>js-remix-sb</module>
-	</modules>
+        <module>debezium</module>
+    </modules>
 
 </project>
