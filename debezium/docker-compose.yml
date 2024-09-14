@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  # https://hub.docker.com/_/postgres
+  db:
+    container_name: db
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+      - ./src/main/resources/dml/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    command: [ "postgres", "-c", "wal_level=logical" ]
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8081

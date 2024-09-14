@@ -5,6 +5,7 @@
 https://www.baeldung.com/debezium-intro
 https://ishansoninitj.medium.com/change-data-capture-cdc-using-debezium-in-a-springboot-application-97ddde8b991a
 https://gist.github.com/tzolov/c3bfa56237f0d4ceb53a93b6c80436e3
+https://github.com/tzolov/cdc-debezium/tree/master
 
 ### Avro
 
