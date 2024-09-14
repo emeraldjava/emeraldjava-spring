@@ -25,3 +25,5 @@ https://github.com/rayanegouda/medium/tree/main/step1
 ## postgres
 
 https://debezium.io/documentation/reference/stable/connectors/postgresql.html
+
+![img.png](img.png)

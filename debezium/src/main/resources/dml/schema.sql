@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS the_simpsons.character (
     update_ts TIMESTAMP DEFAULT current_timestamp NOT NULL
 );
 ------/*Insertion des données dans la table character.*/
-INSERT INTO the_simpsons.character  (nom, pays) VALUES
+INSERT INTO the_simpsons.character  (name, surname) VALUES
     ('Homer','Simpson'),
     ('Bart','Simpson'),
     ('Lisa','Simpson');

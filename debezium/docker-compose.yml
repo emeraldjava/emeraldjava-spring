@@ -1,21 +1,35 @@
-version: '3.8'
 services:
   # https://hub.docker.com/_/postgres
+  # https://codepruner.com/how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose/
   db:
     container_name: db
-    image: postgres
+    image: postgres:latest
     restart: always
+    #network_mode: host
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - '5432:5432'
+      - 5432:5432
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
-      - ./src/main/resources/dml/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      # https://stackoverflow.com/questions/26598738/how-to-create-user-database-in-script-for-docker-postgres
+      - ./src/main/resources/dml/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
     command: [ "postgres", "-c", "wal_level=logical" ]
   adminer:
-    image: adminer
+    container_name: adminer
+    image: adminer:latest
     restart: always
+    #network_mode: host
+    depends_on:
+      - db
     ports:
-      - 8081:8081
+      - 80:8080
+
+# docker networking!
+# https://stackoverflow.com/questions/56582446/how-to-use-host-network-for-docker-compose
+# https://stackoverflow.com/questions/70725881/what-is-the-equivalent-of-add-host-host-docker-internalhost-gateway-in-a-comp
+# networks:
+#  mynetwork:
+#    external: true
+#    name: host
