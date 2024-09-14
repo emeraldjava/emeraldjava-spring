@@ -20,3 +20,7 @@ https://docs.ververica.com/vvc/connectors-and-formats/built-in-formats/debezium-
 https://github.com/debezium/debezium-examples/blob/main/tutorial/register-mysql-avro.json
 
 https://github.com/rayanegouda/medium/tree/main/step1
+
+## postgres
+
+https://debezium.io/documentation/reference/stable/connectors/postgresql.html
