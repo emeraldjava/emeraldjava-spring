@@ -1,17 +1,21 @@
 # spring boot 3.2
 
-## 05-08-2024
+## 2024-09-28
+
+https://callistaenterprise.se/blogg/teknik/2024/06/03/microservices-upgrade-to-SpringBoot32/
+
+## 2024-08-05
 
 Add vue app with [htm](https://github.com/developit/htm)
 
 - https://markus.oberlehner.net/blog/goodbye-webpack-building-vue-applications-without-webpack/
 - https://github.com/maoberlehner/goodbye-webpack-building-vue-applications-without-webpack/blob/master/src/utils/html.js
 
-## 04-08-2024
+## 2024-08-04
 
 Lost too much time with mac os and firefox not resoloving http://localhost:8080/ cirrectly. Works in Chrome.
 
-## 02-08-2024
+## 2024-08-02
 
 Add vue js app with self host
 

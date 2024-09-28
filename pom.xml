@@ -30,7 +30,7 @@
 		<module>joinfaces</module>
         <module>yaml-properties</module>
         <module>httpbin-gateway</module>
-        <module>springboot3</module>
+        <module>spring-boot-3-2</module>
         <module>vuejs-webjar</module>
         <module>graalvm</module>
 		<module>vuejs-npm</module>
@@ -45,6 +45,21 @@
         <module>reactive</module>
 		<module>js-remix-sb</module>
         <module>debezium</module>
-    </modules>
+        <module>atomix</module>
+		<module>spring-boot-2-7</module>
+		<module>spring-boot-3-2/virtual-threads</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>3.1.5</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 </project>

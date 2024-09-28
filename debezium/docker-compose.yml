@@ -5,26 +5,29 @@ services:
     container_name: db
     image: postgres:latest
     restart: always
-    #network_mode: host
+    networks:
+      host: {}
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - 5432:5432
+      - 5432:5435
     volumes:
-      - ./postgres_data:/var/lib/postgresql/data
+      - ./target/postgres_data:/var/lib/postgresql/data
       # https://stackoverflow.com/questions/26598738/how-to-create-user-database-in-script-for-docker-postgres
       - ./src/main/resources/dml/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
-    command: [ "postgres", "-c", "wal_level=logical" ]
+    # https://www.postgresql.org/docs/current/runtime-config-wal.html
+    command: [ "postgres", "-c", "wal_level=replica" ] # replica is default, wal_level=logical
   adminer:
     container_name: adminer
     image: adminer:latest
     restart: always
-    #network_mode: host
+    networks:
+      host: {}
     depends_on:
       - db
     ports:
-      - 80:8080
+      - 8080:8080
 
 # docker networking!
 # https://stackoverflow.com/questions/56582446/how-to-use-host-network-for-docker-compose
@@ -33,3 +36,7 @@ services:
 #  mynetwork:
 #    external: true
 #    name: host
+networks:
+  host:
+    name: host
+    external: true

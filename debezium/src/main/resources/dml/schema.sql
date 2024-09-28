@@ -27,3 +27,5 @@ CREATE TRIGGER maj_date_trigger
                          EXECUTE FUNCTION maj_date();
 ------/*Tres utile pour obtenir des details dans la section before de la donnée*/
 ALTER TABLE the_simpsons.character REPLICA IDENTITY FULL;
+---
+SELECT * FROM the_simpsons.character;

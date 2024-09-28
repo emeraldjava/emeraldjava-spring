@@ -115,8 +115,8 @@
                 <executions>
                     <execution>
                         <id>start</id>
-                        <!--<phase>pre-integration-test</phase>-->
-                        <phase>generate-test-resources</phase>
+                        <phase>pre-integration-test</phase>
+<!--                        <phase>generate-test-resources</phase>-->
                         <goals>
                             <goal>build</goal>
                             <goal>start</goal>

@@ -1,0 +1,13 @@
+# use virtual threads
+# See https://bell-sw.com/blog/a-guide-to-using-virtual-threads-with-spring-boot/
+spring:
+  threads:
+    virtual:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        #health,info,beans,metrics,startup
